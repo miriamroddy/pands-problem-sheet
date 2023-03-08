@@ -32,11 +32,11 @@ Weekly tasks
 This is a simple Python script that uses the print() function in Python to output text to the console, so when we run this program, it will output the text "Hello, World!" to the console. Anything with a # symbol is a comment - it's not executed by the program but provides commentary to the code.
 
 <p>Usage</p>
-	1. Clone the repository to your local machine.
-	2. Navigate to the directory where the hello_world.py script is located. 
-	3. Open a terminal window and run the following command: python hello_world.py
-	4. The message "Hello, world!" should be printed to the console.
 
+1. Clone the repository to your local machine.
+2. Navigate to the directory where the hello_world.py script is located.
+3. Open a terminal window and run the following command: python hello_world.py
+4. The message "Hello, world!" should be printed to the console.
 - - - -
 
  # ***Bank***

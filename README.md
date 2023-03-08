@@ -31,11 +31,11 @@ Weekly tasks
 
 This is a simple Python script that uses the print() function in Python to output text to the console, so when we run this program, it will output the text "Hello, World!" to the console. Anything with a # symbol is a comment - it's not executed by the program but provides commentary to the code.
 
-<p>*Usage*</p>
-		1. Clone the repository to your local machine.
-		2. Navigate to the directory where the hello_world.py script is located. 
-		3. Open a terminal window and run the following command: python hello_world.py
-		4. The message "Hello, world!" should be printed to the console.
+<p>Usage</p>
+	1. Clone the repository to your local machine.
+	2. Navigate to the directory where the hello_world.py script is located. 
+	3. Open a terminal window and run the following command: python hello_world.py
+	4. The message "Hello, world!" should be printed to the console.
 
 - - - -
 
@@ -47,8 +47,7 @@ This is a simple Python script that uses the print() function in Python to outpu
 	Print out the answer in a human readable format with a euro sign and decimal point between the euro and cent of the amount 
   
   
-  Commentary about specific code used is provided within the program. The task asks that the answer should be printed in a 
-human readable format with a euro sign and decimal point between the euro and cent of the amount. This was something that
+  Commentary about specific code used is provided within the program. The task asks that the answer should feature a euro sign and decimal point between the euro and cent of the amount. This was something that
  took a bit of research but was ultimately answered by a post on stack overflow: 
  https://stackoverflow.com/questions/39935857/how-can-i-print-a-euro-%E2%82%AC-symbol-in-python. 
  I could choose between direct input, the unicode glyph number, glyph name or Windows 1252 codepage. 

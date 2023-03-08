@@ -23,4 +23,5 @@ cents = total_amount % 100
 
 ## The string to be printed starts with the text: "The total amount is €", followed by a set of empty curly brackets. 
 ## These work as placeholders where the values of the euros and cents variables will be inserted in the final string.
+
 print('The total amount is €{}.{}'.format(euros, cents))

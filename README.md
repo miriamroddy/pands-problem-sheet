@@ -45,7 +45,7 @@ This is a simple Python script that uses the print() function in Python to outpu
 	Prompt the user and read in two money amounts (in cent).
 	Add the two amounts
 	Print out the answer in a human readable format with a euro sign and decimal point between the euro and cent of the amount 
-		
+  
 Commentary about specific code used is provided within the program. The task asks that the answer should be printed in a      human readable format with a euro sign and decimal point between the euro and cent of the amount. This was something that took a bit of research but was ultimately answered by a post on stack overflow: https://stackoverflow.com/questions/39935857/how-can-i-print-a-euro-%E2%82%AC-symbol-in-python. I could choose between direct input, the unicode glyph number, glyph name or Windows 1252 codepage. Direct input seems the most straightforward for someone new to coding so I went with this.
 ----
 

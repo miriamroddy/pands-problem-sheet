@@ -46,7 +46,7 @@ This is a simple Python script that uses the print() function in Python to outpu
 	Add the two amounts
 	Print out the answer in a human readable format with a euro sign and decimal point between the euro and cent of the amount 
   
-  - - - -
+  
   Commentary about specific code used is provided within the program. The task asks that the answer should be printed in a 
 human readable format with a euro sign and decimal point between the euro and cent of the amount. This was something that
  took a bit of research but was ultimately answered by a post on stack overflow: 

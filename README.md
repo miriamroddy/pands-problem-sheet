@@ -1,7 +1,10 @@
 # Pands Problem Sheet 2023
 
 
-<Description of what is in the readme>
+In order that this be applicable to a real-world setting, comments within each program will explain the code used and to outline my thought processes, assumptions etc. so that the code is understandable. The purpose of variables, function etc. will be explained.
+
+The commentary within the README is more focused on explaining each program in a more holistic manner. In a real-world setting, this is to help a user learn more about a project as a whole. 
+
 
 
 ## Table of Contents
@@ -26,7 +29,7 @@ Weekly tasks
 
     Commit and push a file to the problem sheet called helloworld.py
 
-This is a simple Python script that prints the message "Hello, world!" to the console.
+This is a simple Python script that uses the print() function in Python to output text to the console, so when we run this program, it will output the text "Hello, World!" to the console. Anything with a # symbol is a comment - it's not executed by the program but provides commentary to the code.
 
 <p>*Usage*</p>
 		1. Clone the repository to your local machine.
@@ -45,8 +48,7 @@ This is a simple Python script that prints the message "Hello, world!" to the co
 		*Print out the answer in a human readable format with a euro sign and decimal point between 
 		the euro and cent of the amount 
 	
-
-
+Commentary about specific code used is provided within the program. The task asks that the answer should be printed in a human readable format with a euro sign and decimal point between the euro and cent of the amount. This was something that took a bit of research but was ultimately answered by [a post on stack overflow: ](https://stackoverflow.com/questions/39935857/how-can-i-print-a-euro-%E2%82%AC-symbol-in-python). I could choose between direct input, the unicode glyph number, glyph name or Windows-1252 codepage. Direct input seems the most straightforward for someone new to coding so I went with this.
 ----
 
   # ***Accounts***  

@@ -59,9 +59,10 @@ As this was mostly just an exercise in getting the environment set up, I only ha
 
 Initially I used a print() statement using the .format() method:
 
-```python
-print('The total amount is €{}.{}'.format(euros, cents))
- 
+``` 
+[print('The total amount is €{}.{}'.format(euros, cents))]
+``` 
+
 A downside of using the .format() method is that it can be a bit verbose, so I simplified it by using an [f-string](https://www.datacamp.com/tutorial/f-string-formatting-in-python).
 
 
@@ -71,7 +72,7 @@ A downside of using the .format() method is that it can be a bit verbose, so I s
    
 	Write a python program called accounts.py that reads in a 10 character account number and outputs the account number 
 	with only the last 4 digits showing (and the first 6 digits replaced with Xs). Extra: Modify the program to deal with account numbers of any length 
-	(yes that is a vague requirement, comment your assumptions).
+	(yes that is a vague requirement; comment your assumptions).
 	
 This code demonstrates a simple way to obscure part of an account number by replacing it with "XXXXXX". This technique can be useful when sensitive information needs to be inputted, but the output should be obscured for security reasons. 
 

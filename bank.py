@@ -16,7 +16,7 @@ amount2 = int(input('Enter amount2(in cent): '))
 total_amount = amount1 + amount2
 
 # To convert the cents to euros, we divide by 100 and then use the modulo operator (%). 
-# If python is being logical and playing ball, the result is stored in the euros and cents variables.
+# If python is playing ball, the result is stored in the euros and cents variables.
 
 euros = total_amount // 100
 cents = total_amount % 100

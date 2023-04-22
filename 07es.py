@@ -3,15 +3,19 @@
 ## The program should take the filename from an argument on the command line.
 
 
+
+
 import sys
 
+if len(sys.argv) != 2:
+    print("Usage: python count_e.py <filename>")
+    sys.exit(1)
+
 filename = sys.argv[1]
-with open(filename, 'r') as f:
-    contents = f.read()
 
-count = 0
-for letter in contents:
-    if letter == 'e':
-        count += 1
+with open(filename, "r") as file:
+    count = 0
+    for line in file:
+        count += line.count('e') + line.count('E')
 
-print(count)
+print(f"The file {filename} contains {count} e's.")

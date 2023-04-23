@@ -2,14 +2,14 @@
 ## 1. Prompt the user and read in two money amounts (in cent). 2. Add the two amounts 3. Print out 
 ## the answer in a human readable format with a euro sign and decimal point between the euro and cent of the amount 
 
-# User is prompted to input the first amount in cents.  The int() function is used to convert the user's input from a string 
+# The user is prompted to input the first amount in cents.  The int() function is used to convert the user's input from a string 
 # to an integer, so that it can be used in calculations.
 
-amount1 = int(input('Enter amount1(in cent): '))
+amount1 = int(input('Enter the first amount (in cent): '))
 
 # User is prompted to input the second amount in cents.
 
-amount2 = int(input('Enter amount2(in cent): '))
+amount2 = int(input('Enter the second amount (in cent): '))
 
 ## The two amounts are then added together using the + operator, and the result is stored in the total_amount variable.
 

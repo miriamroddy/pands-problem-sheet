@@ -115,33 +115,13 @@ It was necessary to read up on slicing [on w3schools](https://www.w3schools.com/
 ### Code Description
 The Collatz Conjecture is an [infamous](https://imgs.xkcd.com/comics/collatz_conjecture.png) unsolved problem in mathematics, which posits that if you repeatedly apply a simple set of rules to a positive integer, you will eventually reach the number 1. This task involves demonstrating this problem using python.
 
-We ask the user to input a positive integer, which is stored in the number variable.:
-```
-number = int(input("Enter a positive integer: "))
-```
+We ask the user to input a positive integer, which is stored in the number variable.
 We then use a while loop to perform a sequence of calculations on the inputted number until it is equal to 1. So, while the variable number is not equal to 1, we perform a sequence of calculations on it.
-```
-while number != 1:
-```
 While the number is NOT equal to 1, the current value of the number is printed to the console. Each time the while loop iterates, the current value of the number is
 printed to the console, with a space character separating the numbers (we call this variable end).
-```
-    print(number, end=" ")
-```
 We used an if statement to check whether the number is odd or even - we use the modulo operator to do this. If the number is even, we divide by 2. 
-```
-    if number % 2 == 0:
-        number = number // 2
-```
 If the number is odd, we multiply it by 3 and it's then added to 1.
-```
-    else:
-        number = number * 3 + 1
-```
-Finally we print the sequence to the console:
-```
- print(number)
- ```
+Finally we print the sequence to the console.
 
 ### Challenges and Research
 [If statements](https://www.w3schools.com/python/python_conditions.asp)
@@ -160,25 +140,11 @@ Initially my code just outputted the text on one line. A bit of googling gave me
 
 ### Code Description
 We start by importing the datetime module, which allows us to manipulate date and time object data.
-```
-import datetime
-```
 We use the module to get the day of the week for the current date and time - this is then stored in the today variable. We do this by calling the weekday() 
 method of the today object, which returns an integer representing the day of the week, with Monday being a 0 and Sunday being a 6.
-```
-today = datetime.datetime.today().weekday()
-```
 We then create a list called weekdays, with each string in the list representing a weekday - Monday is 0 and Friday is 4.
-```
-weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
-```
 We now use an if statement to check if the day of the week is less than 5. If the day of the week is less than 5, we know that it must be a weekday (because Monday's index is 0 and Thursday's is 4),so we output the "Yes, today is a weekday" message to the console. If the day of the week is 5 or 6, it must be a weekend (Saturday or Sunday), so we output the message "No, today is not a weekday."
-```
-if today < 5:
-    print("Yes, today is a weekday. It's", weekdays[today])
-else:
-    print("No, today is a weekend day.")
-```
+
 ### Challenges and References
 We are using datetime module to get the current date and time. We then use the weekday() method of the datetime object to get the weekday as an integer, where Monday is 0 and Sunday is 6. If the integer is less than 5, then it's a weekday (Monday to Friday). 
 [stack overflow](https://stackoverflow.com/questions/29384696/how-to-find-current-day-is-weekday-or-weekends-in-python)

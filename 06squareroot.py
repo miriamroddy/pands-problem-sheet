@@ -10,12 +10,12 @@ def sqrt(num):
         guess = num / 2
 
 ## Set a level of error for the acceptable difference between the current and previous guesses - we are going with .0001.
-        level_of_error = 0.0001
+        tolerance = 0.0001
 
 ## We use a while loop to iterate until the difference between the current and previous guesses is within the level of error we deem acceptable. We use the abs function to ensure 
 ## that the difference between the two guesses is always a positive number.
 
-        while abs(guess * guess - num) > level_of_error:
+        while abs(guess * guess - num) > tolerance:
             guess = guess - (guess * guess - num) / (2 * guess)
             
 ## We use the round function so that we don't get too many decimal places in the output.

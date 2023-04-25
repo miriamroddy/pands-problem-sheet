@@ -95,13 +95,12 @@ Inside the loop, we read in the account number and check if it has exactly 10 di
 Here we also use a slice function to extract the last 4 digits of the account number. Even though SEPA accounts can't be no longer than 34 characters, this code can cope with larger numbers - we don't patricularly need to limit the input to 34 digits here. Python calculates the number of Xs required by subtracting four from the length of the account number. We concatenate the XString variable and the last_4_digits string to create a masked account number, which we print to the console.
 
 ### Challenges and Research
-The second part of the task was purposefully vague, presumably so we would examine what assumptions we would use in the real world. We're in the EU so I am going to assume that the longest number we're going to be using is 34 digits, since [the limit for a SEPA account is 34 digits](https://www.centralbank.ie/consumer-hub/explainers/what-is-iban-discrimination-and-what-can-i-do-about-it) - they are typically alphanumeric, which shouldn't be an issue since the input is treated as a string rather than an int or a float.
+The second part of the task was purposefully vague, presumably so we would examine what assumptions we would use in the real world. We're in the EU so I am going to assume that the longest number we're going to be using is 34 digits, since [the limit for a SEPA account is 34 digits](https://www.centralbank.ie/consumer-hub/explainers/what-is-iban-discrimination-and-what-can-i-do-about-it). SEPA account numbers are typically alphanumeric, which shouldn't be an issue since the input is treated as a string rather than an int or a float.
 
 
 This was a good opportunity to get some practice at [string manipulation](https://www.pythonforbeginners.com/basics/string-manipulation-in-python). For both iterations of the task, I read up on using 
  slicing strings on [w3schools](https://www.w3schools.com/python/python_strings_slicing.asp) and on [reddit/r/python](https://www.reddit.com/r/Python/comments/shrw4q/a_comprehensive_guide_to_slicing_in_python/). This was also a nice chance to learn about and to play around with the [len function](https://www.w3schools.com/python/python_strings_slicing.asp). 
 
-=
 I came back to this task in later weeks to add a [while loop](https://www.freecodecamp.org/news/while-loops-in-python-while-true-loop-statement-example/#:~:text=A%20while%20loop%20will%20always,while%20the%20condition%20remains%20True%20.) to the 10-digit iteration. I hadn't included this initially as we only encountered them in Week 4. Including the loop ensures that we prompt the user until they input 10 digits.
 
 

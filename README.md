@@ -165,7 +165,9 @@ When this happens, the loop terminates using the break statement. We can then us
 ### Challenges and Research
 This involved researching the [Newton-Raphson method](https://towardsdatascience.com/develop-your-own-newton-raphson-algorithm-in-python-a20a5b68c7dd), not something for the mathematically uninclined. It is an iterative method for finding the roots of a function. It works by making an initial guess of the root, and then iteratively refining that guess by using the slope of the function at that point to estimate where the root might be. Or, in [layman's terms](https://www.reddit.com/r/explainlikeimfive/comments/mh83qk/eli5_why_does_the_newtonraphson_method_work/), it's a way of finding the root by making an educated guess, and then making better and better guesses until we get the right answer. In Python, this can be implemented using a loop that updates the guess at each iteration until the desired level of accuracy is achieved. 
 
-There are different strategies for choosing the initial guess in numerical methods for approximating the square root, but I chose to go with n/2 as the initial guess. This is a sensible starting point for many numbers because the square root of a number is always going to be less than or equal to half of the number itself, and seemed like the most straightforward approach. A [tolerance level](https://towardsdatascience.com/develop-your-own-newton-raphson-algorithm-in-python-a20a5b68c7dd) of .0001 was selected because it is generally considered to be a good balance between accuracy and computational efficiency for estimating square roots using the Newton-Raphson method.
+There are different strategies for choosing the initial guess in numerical methods for approximating the square root, but I chose to go with n/2 as the initial guess. This is a sensible starting point for many numbers because the square root of a number is always going to be less than or equal to half of the number itself, and seemed like the most straightforward approach. A [tolerance level](https://towardsdatascience.com/develop-your-own-newton-raphson-algorithm-in-python-a20a5b68c7dd) of .0001 was selected because it is generally considered to be a good balance between accuracy and computational efficiency for estimating square roots using the Newton-Raphson method. I also had to incorporate a method for handling negative input, since the Newton-Raphson method is not defined for negative input numbers. A while loop did the job here.
+
+I preffered an output that rounded the reult to two decimal places so this needed a bit of research - I used the [round function](https://www.w3schools.com/python/ref_func_round.asp) which is nice and straightforward.
 - - - -
   # ***NumberofEs***
   
@@ -181,6 +183,7 @@ filename. We use the open function (with mode r for reading) to read the content
 Once the file is opened, the program iterates over each line of the file using a for loop. For every line, the code counts how many times the characters 'e' and 'E' appear 
 in the line using the count() method of the string object. It then adds the count of each line to a running total count. When the loop finishes, what is stored in count is the total
 number of occurances of both e and E in the file. We use an f-string to print the number of occurances to the console.
+
 ### Challenges and Research
 
  We are counting both lowercase 'e' and uppercase 'E' but it should be kept in mind that we're not considering any other variations of the letter 'e', such as accented characters.

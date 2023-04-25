@@ -13,7 +13,7 @@ today = datetime.datetime.today().weekday()
 
 ## We then create a list called weekdays, with each string in the list representing a weekday - Monday is 0 and Friday is 4.
 
-weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+weekdays = ("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
 
 ## We now use an if statement to check if the day of the week is less than 5. If the day of the week is less than 5, we know that it must be a weekday (because Monday's index is 0 and Thursday's is 4),
 ## so we output the "Yes, today is a weekday" message to the console. If the day of the week is 5 or 6, it must be a weekend 

@@ -139,7 +139,7 @@ We then create a tuple called weekdays, with each string in the tuple representi
 We use an if statement to check if the day of the week is less than 5. If the day of the week is less than 5, we know that it must be a weekday (because Monday's index is 0 and Thursday's is 4). We then output the relevant message to the console, depending on whether today is a weekday or not.
 
 ### Challenges and Research
-This task initially seemed a lot trickier than it turned out to be, highlighting how useful it is to know what modules are available in Python. [Stack overflow](https://stackoverflow.com/questions/29384696/how-to-find-current-day-is-weekday-or-weekends-in-python) ultimately clued me in on the datetime module. I learned how to create a datetime object using the [.datetime.datetime() constructor](https://docs.python.org/3/library/datetime.html). It was a nice introduction to using lists, but I changed it to [a tuple](https://www.w3schools.com/python/python_tuples.asp), since the days of the week are unlikely to change. This won't really affect the functionality but it seems to be the more appropriate choice.
+This task initially seemed a lot trickier than it turned out to be, highlighting how useful it is to know what modules are available in Python. [Stack overflow](https://stackoverflow.com/questions/29384696/how-to-find-current-day-is-weekday-or-weekends-in-python) ultimately clued me in on the datetime module. I learned how to create a datetime object using the [.datetime.datetime() constructor](https://docs.python.org/3/library/datetime.html). It was a nice introduction to using lists, but I changed it to [a tuple](https://www.w3schools.com/python/python_tuples.asp), since the days of the week are unlikely to change. This won't really affect the functionality but it seemed to be the more appropriate choice.
 
 - - - -
 
@@ -154,7 +154,7 @@ This task initially seemed a lot trickier than it turned out to be, highlighting
 	so only do as much work on this as you feel comfortable.
 
 ### Code Description
-We start the program by defining the sqrt function. This involves taking a user inputted argument which is assumed to be a floating-point number. If the number is positive, it starts with an initial guess of half the input value.
+We start the program by defining the sqrt function. This involves taking a user inputted argument, assumed to be a floating-point number. If the number is positive, it starts with an initial guess of half the input value.
 The program then sets a level of error for the acceptable difference between the current and previous guesses - we are going with .0001. We use a while loop to iterate until the difference between the current and previous guesses 
 is within the level of error we deem acceptable. We use the abs function to ensure that the difference between the two guesses is always a positive number.
 We use the round function so that we don't get too many decimal places in the output. A while loop is used that keeps going until the user inputs a positive-floating point number. 
@@ -163,7 +163,7 @@ When this happens, the loop terminates using the break statement. We can then us
 ### Challenges and Research
 This involved researching the [Newton-Raphson method](https://towardsdatascience.com/develop-your-own-newton-raphson-algorithm-in-python-a20a5b68c7dd), not something for the mathematically uninclined. It is an iterative method for finding the roots of a function. It works by making an initial guess of the root, and then iteratively refining that guess by using the slope of the function at that point to estimate where the root might be. Or, in [layman's terms](https://www.reddit.com/r/explainlikeimfive/comments/mh83qk/eli5_why_does_the_newtonraphson_method_work/), it's a way of finding the root by making an educated guess, and then making better and better guesses until we get the right answer. In Python, this can be implemented using a loop that updates the guess at each iteration until the desired level of accuracy is achieved. 
 
-There are different strategies for choosing the initial guess in numerical methods for approximating the square root, but I chose to go with n/2 as the initial guess. This is a sensible starting point for many numbers because the square root of a number is always going to be less than or equal to half of the number itself, and seemed like the most straightforward approach.
+There are different strategies for choosing the initial guess in numerical methods for approximating the square root, but I chose to go with n/2 as the initial guess. This is a sensible starting point for many numbers because the square root of a number is always going to be less than or equal to half of the number itself, and seemed like the most straightforward approach. A [tolerance level](https://towardsdatascience.com/develop-your-own-newton-raphson-algorithm-in-python-a20a5b68c7dd) of .0001 was selected because it is generally considered to be a good balance between accuracy and computational efficiency for estimating square roots using the Newton-Raphson method.
 - - - -
   # ***NumberofEs***
   

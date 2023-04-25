@@ -102,7 +102,8 @@ The second part of the task was purposefully vague, presumably so we would exami
 
 This was a good opportunity to get some practice at [string manipulation](https://www.pythonforbeginners.com/basics/string-manipulation-in-python). For both iterations of the task, I read up on using 
  slicing strings on [w3schools](https://www.w3schools.com/python/python_strings_slicing.asp) and on [reddit/r/python](https://www.reddit.com/r/Python/comments/shrw4q/a_comprehensive_guide_to_slicing_in_python/). This was also a nice chance to learn about and to play around with the [len function](https://www.w3schools.com/python/python_strings_slicing.asp). 
- 
+
+=
 I came back to this task in later weeks to add a [while loop](https://www.freecodecamp.org/news/while-loops-in-python-while-true-loop-statement-example/#:~:text=A%20while%20loop%20will%20always,while%20the%20condition%20remains%20True%20.) - I hadn't included this initially as we only encountered them in Week 4. Including the loop ensures that we prompt the user until they input 10 digits.
 
 

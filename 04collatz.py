@@ -22,7 +22,9 @@ while number != 1:
         number = number // 2
 
 ## If the number is odd, we multiply it by 3 and it's then added to 1.
+
     else:
         number = number * 3 + 1
+        
 ## Finally we print the sequence to the console
 print(number)

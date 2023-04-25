@@ -154,7 +154,7 @@ This task initially seemed a lot trickier than it turned out to be, highlighting
 
 ### Code Description
 We start the program by defining the sqrt function. This involves taking a user inputted argument, assumed to be a floating-point number. If the number is positive, it starts with an initial guess of half the input value.
-The program then sets a level of error for the acceptable difference between the current and previous guesses - we are going with .0001. We use a while loop to iterate until the difference between the current and previous guesses 
+The program then sets a tolerance (level of error) for the acceptable difference between the current and previous guesses - we are going with .0001. We use a while loop to iterate until the difference between the current and previous guesses 
 is within the level of error we deem acceptable. We use the abs function to ensure that the difference between the two guesses is always a positive number.
 We use the round function so that we don't get too many decimal places in the output. A while loop is used that keeps going until the user inputs a positive-floating point number. 
 When this happens, the loop terminates using the break statement. We can then use the sqrt function, call it on the user input (num) and print the result.

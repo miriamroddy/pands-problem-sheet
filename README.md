@@ -93,17 +93,20 @@ A downside of using the [.format() method](https://www.w3schools.com/python/ref_
 Two implementations of this program are included, the first of which reads in a ten-digit account number and the second of which reads in an account number of any length.
 
 **Ten-digit implementation:**
-This code prompts the user to input their 10-digit account number and masks the first six digits while displaying the last four digits. This technique can be useful when sensitive information needs to be inputted, but the output should be obscured for security reasons. If the user enters an account number that is not 10 digits long, the program will display an error message and prompt the user to enter their account number again until a valid input is received - we use a while loop to do this. 
+This code prompts the user to input their 10-digit account number and masks the first six digits while displaying the last four digits. If the user enters an account number that is not 10-digits long, the program will display an error message and prompt the user to enter their account number again until a valid input is received - we use a [while loop](https://www.w3schools.com/python/python_while_loops.asp) to do this. 
 
-Inside the loop, we read in the account number inputted by the user using the input() function.We then check if the account number has exactly 10 digits using the len() function. If the account number has exactly 10 digits, we concatenate "XXXXXX" with the last 4 digits of the account number using string slicing and store the result in a variable called masked_account_number. We then exit the loop using the break statement since we have a valid account number. If the account number does not have exactly 10 digits, we print an error message using the print() function. If the account number does have 10 digits, we use the print() function to output the masked account number with the message "Your masked account number is:".
+Inside the loop, we read in the account number inputted by the user using the input() function. We then check if the account number has exactly 10 digits using the len() function. If the account number has exactly 10 digits, we concatenate "XXXXXX" with the last 4 digits of the account number using string slicing. We exit the loop using the [break statement](https://www.geeksforgeeks.org/python-break-statement/). If the account number does not have exactly 10 digits, we print an error message using the print() function and if it does have 10 digits, we also use the print function to diaplay the masked account number.
 
 **Any-length implementation**
-The second part of the task was purposefully vague, presumably so we would examine what assumptions we would use in the real world. We're in the EU so I am going to assume that the longest number we're going to be using is 34 digits, since [the limit for a SEPA account is 34 digits](https://www.iban.com/glossary) - they are typically alphanumeric, which shouldn't be an issue since the input is treated as a string rather than an int or a float.
+The second part of the task was purposefully vague, presumably so we would examine what assumptions we would use in the real world. We're in the EU so I am going to assume that the longest number we're going to be using is 34 digits, since [the limit for a SEPA account is 34 digits](https://www.centralbank.ie/consumer-hub/explainers/what-is-iban-discrimination-and-what-can-i-do-about-it) - they are typically alphanumeric, which shouldn't be an issue since the input is treated as a string rather than an int or a float.
 
-In this version, we explicitly state that the account number can be up to 34 characters. Even though SEPA accounts can be no longer than 34 characters, this can actually cope with larger numbers - there functionally doesn't seem to be a need to limit the input to 34 digits in the code. This version also uses the slice function to extract the last 4 digits of the account number, and stores them in a variable called last_4_digits. Python calculates the number of Xs required by subtracting 4 (the number of last digits to be shown) from the length of the account number. . The result is then stored in the number_of_xs variable.  This will output how many Xs need to go before the last four digits of the account number. We now concatenate the Xsting variable and the last_4_digits string to create a masked account number. Finally, we print the masked account number to the console.
+Even though SEPA accounts can be no longer than 34 characters, this code can cope with larger numbers - the functionally doesn't seem to be a need to limit the input to 34 digits in the code. We use a slice function to extract the last 4 digits of the account number. Python calculates the number of Xs required by subtracting four from the length of the account number. We concatenate the Xsting variable and the last_4_digits string to create a masked account number. Finally, we print the masked account number to the console.
 
 ### Challenges and Research
-It was necessary to read up on slicing [on w3schools](https://www.w3schools.com/python/python_strings_slicing.asp) and on [reddit/r/python](https://www.reddit.com/r/Python/comments/shrw4q/a_comprehensive_guide_to_slicing_in_python/).
+This was a good opportunity to get some practice at [string manipulation](https://www.pythonforbeginners.com/basics/string-manipulation-in-python). For both iterations of the task, I read up on using 
+ slicing strings on [w3schools](https://www.w3schools.com/python/python_strings_slicing.asp) and on [reddit/r/python](https://www.reddit.com/r/Python/comments/shrw4q/a_comprehensive_guide_to_slicing_in_python/). This was also a nice way to play around with the [len function](https://www.w3schools.com/python/python_strings_slicing.asp), as I used in in slightly different ways in both iterations.
+ 
+I came back to this task in later weeks to add a [while loop](https://www.freecodecamp.org/news/while-loops-in-python-while-true-loop-statement-example/#:~:text=A%20while%20loop%20will%20always,while%20the%20condition%20remains%20True%20.) - I hadn't included this initially as we only encountered them in Week 4. Including the loop ensures that we prompt the user until they input 10 digits.
 
 
   # ***Collatz***
@@ -112,23 +115,17 @@ It was necessary to read up on slicing [on w3schools](https://www.w3schools.com/
 	of the following calculation. At each step calculate the next value by taking the current value and, if it is even,
 	divide it by two, but if it is odd, multiply it by three and add one. Have the program end if the current value is one.
 
-### Code Description
-The Collatz Conjecture is an [infamous](https://imgs.xkcd.com/comics/collatz_conjecture.png) unsolved problem in mathematics, which posits that if you repeatedly apply a simple set of rules to a positive integer, you will eventually reach the number 1. This task involves demonstrating this problem using python.
 
-We ask the user to input a positive integer, which is stored in the number variable.
-We then use a while loop to perform a sequence of calculations on the inputted number until it is equal to 1. So, while the variable number is not equal to 1, we perform a sequence of calculations on it.
-While the number is NOT equal to 1, the current value of the number is printed to the console. Each time the while loop iterates, the current value of the number is
-printed to the console, with a space character separating the numbers (we call this variable end).
-We used an if statement to check whether the number is odd or even - we use the modulo operator to do this. If the number is even, we divide by 2. 
-If the number is odd, we multiply it by 3 and it's then added to 1.
-Finally we print the sequence to the console.
+### Code Description
+
+We ask the user to input a positive integer, and then use a while loop to perform a sequence of calculations on the number until it is equal to 1. Each time the while loop iterates, the current value of the number is printed to the console, with a space character separating the numbers.
+We used an if statement to check whether the number is odd or even, using the modulo operator to do this. If the number is even, we divide by 2. If the number is odd, we multiply it by 3 and it's then added to 1. Finally we print the sequence to the console, formatted so it's all in one line.
 
 ### Challenges and Research
-[If statements](https://www.w3schools.com/python/python_conditions.asp)
-[While Loops](https://www.w3schools.com/python/python_while_loops.asp)
 
+The Collatz Conjecture is an [slightly head-melting](https://imgs.xkcd.com/comics/collatz_conjecture.png) unsolved problem in mathematics, which posits that if you repeatedly apply a simple set of rules to a positive integer, you will eventually reach the number 1. This task involves demonstrating this problem using python. The challenge here is to understand the problem before implementing it in code. After learning about some of the theory behind the conjecture from [the Veritasium channel](https://www.youtube.com/watch?v=094y1Z2wpJg&t=1s&ab_channel=Veritasium), I then researched how a sequence of calculations could best be done in Python on [medium](https://medium.com/the-art-of-python/the-collatz-sequence-in-python-eb7e1f1b4f9e). [Geeksforgeeks](https://www.geeksforgeeks.org/program-to-print-collatz-sequence/) in particular explained this nice and simply.
 
-Initially my code just outputted the text on one line. A bit of googling gave me some infomation about the [end parameter]( https://www.geeksforgeeks.org/gfact-50-python-end-parameter-in-print/), that I could use to make the output tidier by [having each result on a new line](https://www.w3schools.com/python/ref_func_print.asp).
+This was a good chance to get to grips with [If statements](https://www.w3schools.com/python/python_conditions.asp) and [While Loops](https://www.w3schools.com/python/python_while_loops.asp). We need the while loop to iterate through the sequence of numbers and the if statement to check whether the number is odd or even. Initially my code just outputted the text on one line. A bit of googling gave me some infomation about the [end parameter]( https://www.geeksforgeeks.org/gfact-50-python-end-parameter-in-print/), that I could use to make the output tidier by [having each result on a new line](https://www.w3schools.com/python/ref_func_print.asp).
 
 
 ----
@@ -139,15 +136,14 @@ Initially my code just outputted the text on one line. A bit of googling gave me
 	You will need to search the web to find how you work out what day it is.
 
 ### Code Description
-We start by importing the datetime module, which allows us to manipulate date and time object data.
-We use the module to get the day of the week for the current date and time - this is then stored in the today variable. We do this by calling the weekday() 
+We start by importing the [datetime module](https://docs.python.org/3/library/datetime.html), which allows us to manipulate date and time object data.
+We use the module to get the day of the week for the system's current date and time. We call the weekday() 
 method of the today object, which returns an integer representing the day of the week, with Monday being a 0 and Sunday being a 6.
-We then create a list called weekdays, with each string in the list representing a weekday - Monday is 0 and Friday is 4.
-We now use an if statement to check if the day of the week is less than 5. If the day of the week is less than 5, we know that it must be a weekday (because Monday's index is 0 and Thursday's is 4),so we output the "Yes, today is a weekday" message to the console. If the day of the week is 5 or 6, it must be a weekend (Saturday or Sunday), so we output the message "No, today is not a weekday."
+We then create a tuple called weekdays, with each string in the tuple representing a weekday - Monday is 0 and Friday is 4.
+We use an if statement to check if the day of the week is less than 5. If the day of the week is less than 5, we know that it must be a weekday (because Monday's index is 0 and Thursday's is 4). We then output the relevant message to the console, depending on whether today is a weekday or not.
 
-### Challenges and References
-We are using datetime module to get the current date and time. We then use the weekday() method of the datetime object to get the weekday as an integer, where Monday is 0 and Sunday is 6. If the integer is less than 5, then it's a weekday (Monday to Friday). 
-[stack overflow](https://stackoverflow.com/questions/29384696/how-to-find-current-day-is-weekday-or-weekends-in-python)
+### Challenges and Research
+This task initially seemed a lot trickier than it turned out to be, highlighting how useful it is to know what modules are available in Python. [Stack overflow](https://stackoverflow.com/questions/29384696/how-to-find-current-day-is-weekday-or-weekends-in-python) ultimately clued me in on the datetime module. I learned how to create a datetime object using the [.datetime.datetime() constructor](https://docs.python.org/3/library/datetime.html). It was a nice introduction to using lists, but I changed it to [a tuple](https://www.w3schools.com/python/python_tuples.asp), since the days of the week are unlikely to change. This won't really affect the functionality but it seems to be the more appropriate choice.
 
 - - - -
 
@@ -162,10 +158,16 @@ We are using datetime module to get the current date and time. We then use the w
 	so only do as much work on this as you feel comfortable.
 
 ### Code Description
-### Challenges and References
+We start the program by defining the sqrt function. This involves taking a user inputted argument which is assumed to be a floating-point number. If the number is positive, it starts with an initial guess of half the input value.
+The program then sets a level of error for the acceptable difference between the current and previous guesses - we are going with .0001. We use a while loop to iterate until the difference between the current and previous guesses 
+is within the level of error we deem acceptable. We use the abs function to ensure that the difference between the two guesses is always a positive number.
+We use the round function so that we don't get too many decimal places in the output. A while loop is used that keeps going until the user inputs a positive-floating point number. 
+When this happens, the loop terminates using the break statement. We can then use the sqrt function, call it on the user input (num) and print the result.
+
+### Challenges and Research
 This involved researching the [Newton-Raphson method](https://towardsdatascience.com/develop-your-own-newton-raphson-algorithm-in-python-a20a5b68c7dd), not something for the mathematically uninclined. It is an iterative method for finding the roots of a function. It works by making an initial guess of the root, and then iteratively refining that guess by using the slope of the function at that point to estimate where the root might be. Or, in [layman's terms](https://www.reddit.com/r/explainlikeimfive/comments/mh83qk/eli5_why_does_the_newtonraphson_method_work/), it's a way of finding the root by making an educated guess, and then making better and better guesses until we get the right answer. In Python, this can be implemented using a loop that updates the guess at each iteration until the desired level of accuracy is achieved. 
 
-There are different strategies for choosing the initial guess in numerical methods for approximating the square root, but I chose to go with n/2 as the initial guess. This is a sensible starting point for many numbers because the square root of a number is always going to be less than or equal to half of the number itself, and seemed like the most straightforward approach and appealed to my mathematically-averse nature.
+There are different strategies for choosing the initial guess in numerical methods for approximating the square root, but I chose to go with n/2 as the initial guess. This is a sensible starting point for many numbers because the square root of a number is always going to be less than or equal to half of the number itself, and seemed like the most straightforward approach.
 - - - -
   # ***NumberofEs***
   
@@ -173,7 +175,15 @@ There are different strategies for choosing the initial guess in numerical metho
 	document any assumptions you are making.The program should take the filename from an argument on the command line
 
 ### Code Description
-### Challenges and References
+The first thing we do is import the sys module. The code uses sys.argv to read the argument and pass it to the program - we know we need two arguments (the name of the program and the filename), so we use an if statement here.
+If the number of arguments is less than two, the program prints a message to the console advising about how to format the query correctly, and exits.   
+We use sys.argv[1] to retrieve the second element of the sys.argv list, which is assumed to be the filename input by the user. The code assigns this filename to the variable
+filename. We use the open function (with mode r for reading) to read the content of the file. We neeed to use a with statement to ensure that the file is properly closed after Python is finished with it. 
+
+Once the file is opened, the program iterates over each line of the file using a for loop. For every line, the code counts how many times the characters 'e' and 'E' appear 
+in the line using the count() method of the string object. It then adds the count of each line to a running total count. When the loop finishes, what is stored in count is the total
+number of occurances of both e and E in the file. We use an f-string to print the number of occurances to the console.
+### Challenges and Research
 
  We are counting both lowercase 'e' and uppercase 'E' but it should be kept in mind that we're not considering any other variations of the letter 'e', such as accented characters.
 - - - -
@@ -187,6 +197,15 @@ There are different strategies for choosing the initial guess in numerical metho
 
 ### Code Description
 
+We begin by importing the numpy library and give it the alias np (for ease of reference) and do the same with the matplotlib library, giving it the alias plt.
+We then generate 1000 random values from a normal distribution with mean of 5 and SD of 2. The generated values are stored in the data variable - we want an array that contains 1000
+random numbers with a mean of 5 and an SD of 2. Now that we have the 1000 values we want, we want to create a histogram of what we have stored in the data variable.  Data refers to the array we just created. Bins=30 specifies
+the number of bins or columns that we want in the histogram. The last argument specifies the transparency of the bars in the histrogram. 
+0.5 means we will have semi-transparent bars i.e. 50% transparency. The label argument defines what we use in the final legend.
+We need to create a second array, called x, that contains a hundred evenly spaced values between 0 and 10 using the numpy.linspace() method. The third argument specifies the number of values to generate in the sequence.
+We calculate the function h(x) = x^3 for each value of x. Add labels to both axes. We want to give the graph a title and to include a legend. Finally, we show the resulting graph
+
+### Challenges and Research
 - - - -
 
 Technologies

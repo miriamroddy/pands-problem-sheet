@@ -211,9 +211,10 @@ The first thing to do is to understand the problem requirements: before starting
 References
 ====
 
-PEP 8 -- Style Guide for Python Code: https://www.python.org/dev/peps/pep-0008/
-Google Python Style Guide: https://google.github.io/styleguide/pyguide.html
-Python Style Guide by Guido van Rossum: https://legacy.python.org/dev/peps/pep-0008/#introduction
+[PEP 8 -- Style Guide for Python Code] (https://www.python.org/dev/peps/pep-0008/)
+[Google Python Style Guide](https://google.github.io/styleguide/pyguide.html)
+[Python Style Guide by Guido van Rossum] (https://legacy.python.org/dev/peps/pep-0008/#introduction)
 
 Matthes, E. (2015). Python Crash Course: A Hands-On, Project-Based Introduction to Programming. No Starch Press.
 Beatty, A. (2023). Programming and Scripting [Online Higher Diploma Program]. https://vlegalwaymayo.atu.ie/course/view.php?id=6208
+

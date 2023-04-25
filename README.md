@@ -199,8 +199,8 @@ A challenge here was to find a method of taking the filename from an argument on
 
 We begin by importing the [numpy library](https://www.geeksforgeeks.org/python-numpy/) and give it the alias np [(for ease of reference)](https://www.reddit.com/r/learnpython/comments/eeqmlh/why_bother_with_import_numpy_as_np/) and do the same with the [matplotlib library](https://www.w3schools.com/python/matplotlib_pyplot.asp), giving it the alias plt. 
 We then generate 1000 random values from a normal distribution with mean of 5 and SD of 2. The generated values are stored in the data variable - we want an array that contains 1000
-random numbers with a mean of 5 and an SD of 2. Now that we have the 1000 values we want, we want to create a histogram of what we have stored in the data variable.  We have various arguments that we can play around with here - e.g. we can select the transparancy of the histogram bars, and we can create a nice legend with .
-We need to create a second array, called x, that contains a hundred evenly spaced values between 0 and 10 using the numpy.linspace() method. The third argument specifies the number of values to generate in the sequence.
+random numbers with a mean of 5 and an SD of 2. Now that we have the 1000 values we want, we want to create a histogram of what we have stored in the data variable.  We have various arguments that we can play around with here - e.g. we can select the transparancy of the histogram bars, and we can create a neat legend.
+We need to create a second array, called x, that contains a hundred evenly spaced values between 0 and 10 using the [numpy.linspace()](https://realpython.com/np-linspace-numpy/) method. The third argument specifies the number of values to generate in the sequence.
 We calculate the function h(x) = x^3 for each value of x. Add labels to both axes. We want to give the graph a title and to include a legend with the [legend() argument](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.legend.html). Finally, we show the resulting graph
 
 ### Challenges and Research

@@ -7,9 +7,11 @@
 def sqrt(num):
 
 ## Now we start with the main part of the sqrt function. If the number is positive, it start with an initial guess of half the input value - see readme for reasoning.
+        
         guess = num / 2
 
 ## Set a level of error for the acceptable difference between the current and previous guesses - we are going with .0001.
+       
         tolerance = 0.0001
 
 ## We use a while loop to iterate until the difference between the current and previous guesses is within the level of error we deem acceptable. We use the abs function to ensure 
@@ -19,6 +21,7 @@ def sqrt(num):
             guess = guess - (guess * guess - num) / (2 * guess)
             
 ## We use the round function so that we don't get too many decimal places in the output.
+        
         return round(guess, 2)
 
 # This part of the code prompts the user to enter a positive floating-point number. We use a while loop that keeps going until the user inputs a positive-floating point number. 

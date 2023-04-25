@@ -182,9 +182,9 @@ number of occurances of both 'e' and 'E' in the file. We use an f-string to prin
 
 ### Challenges and Research
 
-A challenge here was to find a method of taking the filename from an argument on the command line. [Geeksforgeeks](https://www.geeksforgeeks.org/how-to-use-sys-argv-in-python/) was helpful here and I found that I could import the [sys module](https://docs.python.org/3/library/sys.html). I also found that we need to use a [with statement](https://www.youtube.com/watch?v=87DuQWjID_E) to ensure that the file is properly closed after Python is finished with it - this is an important step in avoiding errors.
+The main challenge here was to find a method of taking the filename from an argument on the command line. [Geeksforgeeks](https://www.geeksforgeeks.org/how-to-use-sys-argv-in-python/) was helpful here and I learned importing the [sys module](https://docs.python.org/3/library/sys.html) was the way to go. I also learned that we need to use a [with statement](https://www.youtube.com/watch?v=87DuQWjID_E) to ensure that the file is properly closed after Python is finished with it - this is an important step in avoiding errors.
 
- Some key assumptions here are that we are reading English language texts, and are not considering any other variations of the letter 'e', such as accented characters. If we were do so, we could import the [unicodedata](https://docs.python.org/3/library/unicodedata.html) module. Therfore we are just are interested in counting lowercase 'e' and uppercase 'E'. 
+Some key assumptions here are that we are reading English language texts, and are not considering any other variations of the letter 'e', such as accented characters. We are therefore just interested in counting lowercase 'e' and uppercase 'E's. If we wanted to incorporate accented characters, we could import the [unicodedata](https://docs.python.org/3/library/unicodedata.html) module. 
 - - - -
   # ***PlotTask***
     

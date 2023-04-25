@@ -197,15 +197,14 @@ A challenge here was to find a method of taking the filename from an argument on
 
 ### Code Description
 
-We begin by importing the numpy library and give it the alias np (for ease of reference) and do the same with the matplotlib library, giving it the alias plt.
+We begin by importing the [numpy library](https://www.geeksforgeeks.org/python-numpy/) and give it the alias np [(for ease of reference)](https://www.reddit.com/r/learnpython/comments/eeqmlh/why_bother_with_import_numpy_as_np/) and do the same with the [matplotlib library](https://www.w3schools.com/python/matplotlib_pyplot.asp), giving it the alias plt. 
 We then generate 1000 random values from a normal distribution with mean of 5 and SD of 2. The generated values are stored in the data variable - we want an array that contains 1000
-random numbers with a mean of 5 and an SD of 2. Now that we have the 1000 values we want, we want to create a histogram of what we have stored in the data variable.  Data refers to the array we just created. Bins=30 specifies
-the number of bins or columns that we want in the histogram. The last argument specifies the transparency of the bars in the histrogram. 
-0.5 means we will have semi-transparent bars i.e. 50% transparency. The label argument defines what we use in the final legend.
+random numbers with a mean of 5 and an SD of 2. Now that we have the 1000 values we want, we want to create a histogram of what we have stored in the data variable.  We have various arguments that we can play around with here - e.g. we can select the transparancy of the histogram bars, and we can create a nice legend with .
 We need to create a second array, called x, that contains a hundred evenly spaced values between 0 and 10 using the numpy.linspace() method. The third argument specifies the number of values to generate in the sequence.
-We calculate the function h(x) = x^3 for each value of x. Add labels to both axes. We want to give the graph a title and to include a legend. Finally, we show the resulting graph
+We calculate the function h(x) = x^3 for each value of x. Add labels to both axes. We want to give the graph a title and to include a legend with the [legend() argument](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.legend.html). Finally, we show the resulting graph
 
 ### Challenges and Research
+The first thing to do is to understand the problem requirements: before starting the program, we need to make sure you have a clear understanding of what is required. Combining the plots required some playing around with the library - combining the histogram and function plot onto the same set of axes requires knowledge of how to create [multiple plots](https://www.oreilly.com/library/view/python-data-science/9781491912126/ch04.html) on the same set of axes, and how to adjust the appearance of each plot (e.g. color, line style). 
 - - - -
 
 

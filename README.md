@@ -24,7 +24,7 @@ Weekly Tasks
 ### Task
     Commit and push a file to the problem sheet called helloworld.py
 ### Code Description
-This is a simple Python script that uses the [print()](https://realpython.com/python-print/)function in Python to output the text "Hello, World!" to the console. Anything with a # symbol is a comment - it's not executed by the program but provides commentary to the code.
+This is a simple Python script that uses the [print()](https://realpython.com/python-print/)function to output the text "Hello, World!" to the console. Anything with a # symbol is a comment - it's not executed by the program but provides commentary to the code.
 
 <p>Usage</p>
 

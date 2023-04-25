@@ -200,7 +200,7 @@ We begin by importing the [numpy library](https://www.geeksforgeeks.org/python-n
 We then generate 1000 random values from a normal distribution with mean of 5 and SD of 2. The generated values are stored in the data variable. When making the histogram, we have various arguments that we can play around with - e.g. we can select the transparancy of the histogram bars, we can create a nice legend etc.
 We need to create a second array, called x, that contains a hundred evenly spaced values between 0 and 10 using the [numpy.linspace()](https://realpython.com/np-linspace-numpy/) method.  We calculate the function h(x) = x^3 for each value of x. We create labels for both axes and choose a title for the histogram. We then include a legend with the [legend() argument](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.legend.html). Finally, we show the resulting graph.
 
-![Histogram](https://github.com/miriamroddy/pands-problem-sheet/blob/main/histogram.jpg?raw=true)
+![Histogram](https://github.com/miriamroddy/pands-problem-sheet/blob/main/histogram.png?raw=true)
 
 ### Challenges and Research
 Understand the problem requirement was challenging in itself, as was getting comfortable with using both libraries. Combining the histogram and function plot onto the same set of axes requires knowledge of how to create [multiple plots](https://www.oreilly.com/library/view/python-data-science/9781491912126/ch04.html) on the same set of axes, and how to adjust the appearance of each plot (e.g. color, line style). The learning curve here was steep since the syntax is so different from standard Python. Understanding the various parameters that can be customized also took time, as did my attempts to make the plots look visually appealing.

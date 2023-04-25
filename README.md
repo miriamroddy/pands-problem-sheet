@@ -185,7 +185,7 @@ number of occurances of both e and E in the file. We use an f-string to print th
 
 ### Challenges and Research
 
-A challenge here was to find a method of taking the filename from an argument on the command line. [Geeksforgeeks](https://www.geeksforgeeks.org/how-to-use-sys-argv-in-python/) was helpful here and I found that I could import the [sys module](https://docs.python.org/3/library/sys.html). A key assumption here is that we are reading English language texts, and we are interested in counting both lowercase 'e' and uppercase 'E'. We are not considering any other variations of the letter 'e', such as accented characters since an assumption is that the text is in English. If we were do so, we could import the [unicodedata](https://docs.python.org/3/library/unicodedata.html module).
+A challenge here was to find a method of taking the filename from an argument on the command line. [Geeksforgeeks](https://www.geeksforgeeks.org/how-to-use-sys-argv-in-python/) was helpful here and I found that I could import the [sys module](https://docs.python.org/3/library/sys.html). A key assumption here is that we are reading English language texts, and we are interested in counting both lowercase 'e' and uppercase 'E'. We are not considering any other variations of the letter 'e', such as accented characters since an assumption is that the text is in English. If we were do so, we could import the [unicodedata](https://docs.python.org/3/library/unicodedata.html) module.
 - - - -
   # ***PlotTask***
     

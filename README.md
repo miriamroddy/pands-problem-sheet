@@ -1,10 +1,7 @@
 # Pands Problem Sheet 2023
 
 
-In order that this be applicable to a real-world setting, comments within each program will explain the code used and to outline my thought processes, assumptions etc. so that the code is understandable. The purpose of variables, function etc. will be explained.
-
-The commentary within the README is more focused on explaining each program in a more holistic manner. In a real-world setting, this is to help a user learn more about a project as a whole. 
-
+In order that this be applicable to a real-world setting, comments within each program will explain the code used. I'll outline more about my thought processes, assumptions etc. here. References will be cited in the text and any extra texts/resources that helped with the tasks in general will be listed at the end.
 
 
 ## Table of Contents
@@ -18,7 +15,6 @@ The commentary within the README is more focused on explaining each program in a
     * [Week 07 - NumberofEs](#numberofes)
 	* [Week 08 - Plot Task](#plottask)
 	
-* [Technologies](#technologies)
 * [References](#references)
 
 
@@ -100,11 +96,11 @@ Inside the loop, we read in the account number inputted by the user using the in
 **Any-length implementation**
 The second part of the task was purposefully vague, presumably so we would examine what assumptions we would use in the real world. We're in the EU so I am going to assume that the longest number we're going to be using is 34 digits, since [the limit for a SEPA account is 34 digits](https://www.centralbank.ie/consumer-hub/explainers/what-is-iban-discrimination-and-what-can-i-do-about-it) - they are typically alphanumeric, which shouldn't be an issue since the input is treated as a string rather than an int or a float.
 
-Even though SEPA accounts can be no longer than 34 characters, this code can cope with larger numbers - the functionally doesn't seem to be a need to limit the input to 34 digits in the code. We use a slice function to extract the last 4 digits of the account number. Python calculates the number of Xs required by subtracting four from the length of the account number. We concatenate the Xsting variable and the last_4_digits string to create a masked account number. Finally, we print the masked account number to the console.
+Even though SEPA accounts can be no longer than 34 characters, this code can cope with larger numbers - we don't really need to limit the input to 34 digits in the code. We use a slice function to extract the last 4 digits of the account number. Python calculates the number of Xs required by subtracting four from the length of the account number. We concatenate the Xstring variable and the last_4_digits string to create a masked account number. Finally, we print the masked account number to the console.
 
 ### Challenges and Research
 This was a good opportunity to get some practice at [string manipulation](https://www.pythonforbeginners.com/basics/string-manipulation-in-python). For both iterations of the task, I read up on using 
- slicing strings on [w3schools](https://www.w3schools.com/python/python_strings_slicing.asp) and on [reddit/r/python](https://www.reddit.com/r/Python/comments/shrw4q/a_comprehensive_guide_to_slicing_in_python/). This was also a nice way to play around with the [len function](https://www.w3schools.com/python/python_strings_slicing.asp), as I used in in slightly different ways in both iterations.
+ slicing strings on [w3schools](https://www.w3schools.com/python/python_strings_slicing.asp) and on [reddit/r/python](https://www.reddit.com/r/Python/comments/shrw4q/a_comprehensive_guide_to_slicing_in_python/). This was also a nice chance to learn about and to play around with the [len function](https://www.w3schools.com/python/python_strings_slicing.asp). 
  
 I came back to this task in later weeks to add a [while loop](https://www.freecodecamp.org/news/while-loops-in-python-while-true-loop-statement-example/#:~:text=A%20while%20loop%20will%20always,while%20the%20condition%20remains%20True%20.) - I hadn't included this initially as we only encountered them in Week 4. Including the loop ensures that we prompt the user until they input 10 digits.
 
@@ -123,9 +119,9 @@ We used an if statement to check whether the number is odd or even, using the mo
 
 ### Challenges and Research
 
-The Collatz Conjecture is an [slightly head-melting](https://imgs.xkcd.com/comics/collatz_conjecture.png) unsolved problem in mathematics, which posits that if you repeatedly apply a simple set of rules to a positive integer, you will eventually reach the number 1. This task involves demonstrating this problem using python. The challenge here is to understand the problem before implementing it in code. After learning about some of the theory behind the conjecture from [the Veritasium channel](https://www.youtube.com/watch?v=094y1Z2wpJg&t=1s&ab_channel=Veritasium), I then researched how a sequence of calculations could best be done in Python on [medium](https://medium.com/the-art-of-python/the-collatz-sequence-in-python-eb7e1f1b4f9e). [Geeksforgeeks](https://www.geeksforgeeks.org/program-to-print-collatz-sequence/) in particular explained this nice and simply.
+The Collatz Conjecture is an [slightly head-melting](https://imgs.xkcd.com/comics/collatz_conjecture.png) unsolved problem in mathematics, which posits that if you repeatedly apply a simple set of rules to a positive integer, you will eventually reach the number 1. The first challenge here is to understand the problem before implementing it in code. After learning about some of the theory behind the conjecture from [the Veritasium channel](https://www.youtube.com/watch?v=094y1Z2wpJg&t=1s&ab_channel=Veritasium), I then researched how a sequence of calculations could best be done in Python on [medium](https://medium.com/the-art-of-python/the-collatz-sequence-in-python-eb7e1f1b4f9e). [Geeksforgeeks](https://www.geeksforgeeks.org/program-to-print-collatz-sequence/) in particular explained this nice and simply.
 
-This was a good chance to get to grips with [If statements](https://www.w3schools.com/python/python_conditions.asp) and [While Loops](https://www.w3schools.com/python/python_while_loops.asp). We need the while loop to iterate through the sequence of numbers and the if statement to check whether the number is odd or even. Initially my code just outputted the text on one line. A bit of googling gave me some infomation about the [end parameter]( https://www.geeksforgeeks.org/gfact-50-python-end-parameter-in-print/), that I could use to make the output tidier by [having each result on a new line](https://www.w3schools.com/python/ref_func_print.asp).
+This was a good chance to get to grips with [if statements](https://www.w3schools.com/python/python_conditions.asp) and [While Loops](https://www.w3schools.com/python/python_while_loops.asp). We need the while loop to iterate through the sequence of numbers and the if statement to check whether the number is odd or even. Initially my code just outputted the text on one line. A bit of googling gave me some infomation about the [end parameter]( https://www.geeksforgeeks.org/gfact-50-python-end-parameter-in-print/), that I could use to make the output tidier by [having each result on a new line](https://www.w3schools.com/python/ref_func_print.asp).
 
 
 ----
@@ -137,8 +133,8 @@ This was a good chance to get to grips with [If statements](https://www.w3school
 
 ### Code Description
 We start by importing the [datetime module](https://docs.python.org/3/library/datetime.html), which allows us to manipulate date and time object data.
-We use the module to get the day of the week for the system's current date and time. We call the weekday() 
-method of the today object, which returns an integer representing the day of the week, with Monday being a 0 and Sunday being a 6.
+We use the module to get the day of the week for the system's current date and time. We call the [weekday() 
+method](https://www.geeksforgeeks.org/weekday-function-of-datetime-date-class-in-python/) of the today object, which returns an integer representing the day of the week, with Monday being a 0 and Sunday being a 6.
 We then create a tuple called weekdays, with each string in the tuple representing a weekday - Monday is 0 and Friday is 4.
 We use an if statement to check if the day of the week is less than 5. If the day of the week is less than 5, we know that it must be a weekday (because Monday's index is 0 and Thursday's is 4). We then output the relevant message to the console, depending on whether today is a weekday or not.
 
@@ -208,14 +204,6 @@ We calculate the function h(x) = x^3 for each value of x. Add labels to both axe
 ### Challenges and Research
 - - - -
 
-Technologies
-====
-
-  List Technologies used
-
-
-   
-- - - -
 
 References
 ====

@@ -175,18 +175,17 @@ I preffered an output that rounded the reult to two decimal places so this neede
 	document any assumptions you are making.The program should take the filename from an argument on the command line
 
 ### Code Description
-The first thing we do is import the sys module. The code uses sys.argv to read the argument and pass it to the program - we know we need two arguments (the name of the program and the filename), so we use an if statement here.
-If the number of arguments is less than two, the program prints a message to the console advising about how to format the query correctly, and exits.   
+The first thing we do is import the sys module. The code uses sys.argv to read the argument and pass it to the program - we know we need two arguments (the name of the program and the filename), so we use an if statement here. If the number of arguments is less than two, the program prints a message to the console advising about how to format the query correctly, and exits.   
 We use sys.argv[1] to retrieve the second element of the sys.argv list, which is assumed to be the filename input by the user. The code assigns this filename to the variable
-filename. We use the open function (with mode r for reading) to read the content of the file. We neeed to use a with statement to ensure that the file is properly closed after Python is finished with it. 
+filename. We use the open function (with mode r for reading) to read the content of the file. I found that we need to use a [with statement](https://www.youtube.com/watch?v=87DuQWjID_E) to ensure that the file is properly closed after Python is finished with it - this is an important way of avoiding errors. 
 
 Once the file is opened, the program iterates over each line of the file using a for loop. For every line, the code counts how many times the characters 'e' and 'E' appear 
-in the line using the count() method of the string object. It then adds the count of each line to a running total count. When the loop finishes, what is stored in count is the total
+in the line using the [count() method](https://www.w3schools.com/python/ref_list_count.asp) of the string object. It then adds the count of each line to a running total count. When the loop finishes, what is stored in count is the total
 number of occurances of both e and E in the file. We use an f-string to print the number of occurances to the console.
 
 ### Challenges and Research
 
- We are counting both lowercase 'e' and uppercase 'E' but it should be kept in mind that we're not considering any other variations of the letter 'e', such as accented characters.
+A challenge here was to find a method of taking the filename from an argument on the command line. [Geeksforgeeks](https://www.geeksforgeeks.org/how-to-use-sys-argv-in-python/) was helpful here and I found that I could import the [sys module](https://docs.python.org/3/library/sys.html). A key assumption here is that we are reading English language texts, and we are interested in counting both lowercase 'e' and uppercase 'E'. We are not considering any other variations of the letter 'e', such as accented characters since an assumption is that the text is in English. If we were do so, we could import the [unicodedata](https://docs.python.org/3/library/unicodedata.html module).
 - - - -
   # ***PlotTask***
     

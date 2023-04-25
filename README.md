@@ -202,7 +202,7 @@ We need to create a second array, called x, that contains a hundred evenly space
 ![Histogram](https://github.com/miriamroddy/pands-problem-sheet/blob/main/histogram.png?raw=true)
 
 ### Challenges and Research
-Understand the problem requirement was challenging in itself, as was getting comfortable with using both libraries. Combining the histogram and function plot onto the same set of axes requires knowledge of how to create [multiple plots](https://www.oreilly.com/library/view/python-data-science/9781491912126/ch04.html) on the same set of axes, and how to adjust the appearance of each plot (e.g. color, line style). The learning curve here was steep since the syntax is so different from standard Python. Understanding the various parameters that can be customized also took time, as did my attempts to make the plots look visually appealing.
+Understanding the problem requirement was challenging in itself, as was getting comfortable with using both libraries. Combining the histogram and function plot onto the same set of axes requires knowledge of how to create [multiple plots](https://www.oreilly.com/library/view/python-data-science/9781491912126/ch04.html) on the same set of axes, and how to adjust the appearance of each plot (e.g. color, line style). The learning curve here was steep since the syntax is so different from standard Python. Understanding the various parameters that can be customized also took time, as did my attempts to make the plots look visually appealing.
 - - - -
 
 
